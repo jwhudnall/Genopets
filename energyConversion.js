@@ -1,9 +1,10 @@
-const getInterval = (steps) => {
-  return Math.floor(steps / 1000);
-};
-
 const getEnergy = (totalSteps, decay) => {
+  const getInterval = (steps) => {
+    return Math.floor(steps / 1000);
+  };
+
   let energy = 0;
+
   for (let i = 1; i <= totalSteps; i++) {
     if (i <= 1) {
       energy += 1;
@@ -12,6 +13,10 @@ const getEnergy = (totalSteps, decay) => {
     }
   }
   return energy;
+};
+
+const getEnergyNew = (bankedSteps, stepEfficiencyRating) => {
+  // convert and return steps
 };
 
 const result3k = getEnergy(3000, 0.055);
